@@ -1,73 +1,61 @@
 body {
   margin: 0;
-  background: radial-gradient(circle at bottom, #0a001a, #000);
-  color: #fff;
-  font-family: 'Orbitron', sans-serif;
   overflow: hidden;
+  background-color: black;
+  font-family: 'Courier New', monospace;
+  color: #fff;
+  text-align: center;
 }
 
 #ui {
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 2;
 }
 
-h1 {
-  color: #ff00c8;
-  text-shadow: 0 0 15px #ff00c8, 0 0 30px #ff00c8;
-  margin: 0;
+#title {
+  font-size: 48px;
+  text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
 }
 
-.subtitle {
-  margin-top: -4px;
-  color: #bbb;
-  font-size: 0.9rem;
+#scoreboard {
+  font-size: 20px;
+  margin-top: 10px;
 }
 
-.stats {
-  display: flex;
-  gap: 10px;
-  margin: 5px 0;
-}
-
-button {
-  background: linear-gradient(90deg, #ff00c8, #00ffff);
-  border: none;
-  padding: 8px 15px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
-  color: black;
-}
-
-button:hover {
-  opacity: 0.8;
-}
-
-.hearts {
-  margin: 5px 0;
+#health {
+  margin-top: 10px;
 }
 
 .heart {
-  display: inline-block;
-  width: 25px;
-  height: 25px;
-  background: #ff4081;
-  clip-path: polygon(50% 0%, 100% 35%, 75% 100%, 50% 85%, 25% 100%, 0% 35%);
-  margin-right: 5px;
-  filter: drop-shadow(0 0 10px #ff80bf);
+  color: red;
+  font-size: 24px;
+  margin: 0 2px;
 }
 
 #tagline {
+  font-size: 20px;
+  margin-top: 8px;
+  text-shadow: 0 0 10px #fff;
+}
+
+#startBtn {
+  background: #0ff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 18px;
   margin-top: 10px;
-  font-size: 1.2rem;
-  color: #00ffff;
-  text-shadow: 0 0 15px #00ffff, 0 0 30px #00ffff;
+  transition: background 0.3s;
+}
+#startBtn:hover {
+  background: #09f;
 }
 
 canvas {
-  display: block;
   position: absolute;
   top: 0;
   left: 0;
