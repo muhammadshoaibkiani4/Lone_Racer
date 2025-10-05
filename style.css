@@ -1,47 +1,74 @@
-:root{
-  --bg-dark:#06030a;
-  --neon-pink:#ff3fbf;
-  --neon-cyan:#00f0ff;
-  --neon-purple:#8b3cff;
-  --neon-green:#23ff6b;
-  --neon-yellow:#ffd24a;
-  --glass: rgba(255,255,255,0.03);
-  --ui: rgba(255,255,255,0.06);
-  --font: 'Segoe UI', Roboto, system-ui, sans-serif;
+body {
+  margin: 0;
+  background: radial-gradient(circle at bottom, #0a001a, #000);
+  color: #fff;
+  font-family: 'Orbitron', sans-serif;
+  overflow: hidden;
 }
 
-html,body{ height:100%; margin:0; background: radial-gradient(ellipse at 10% 10%, #12061a 0%, #04010a 60%); font-family:var(--font); color:#e8e8f0; }
-#game{ display:block; width:100%; height:calc(100vh - 120px); background:linear-gradient(#04030b,#000); box-shadow: 0 8px 40px rgba(0,0,0,0.7), inset 0 0 120px rgba(0,0,0,0.35); }
+#ui {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 2;
+}
 
-#ui{ position:fixed; left:12px; top:12px; z-index:20; user-select:none; max-width:420px;}
-#title{ font-weight:900; letter-spacing:3px; color:var(--neon-pink); text-shadow:0 0 10px rgba(255,63,191,0.8),0 0 30px rgba(0,240,255,0.08); font-size:20px; }
-#subtitle{ color:rgba(255,255,255,0.65); font-weight:600; font-size:12px; margin-bottom:6px; }
+h1 {
+  color: #ff00c8;
+  text-shadow: 0 0 15px #ff00c8, 0 0 30px #ff00c8;
+  margin: 0;
+}
 
-#scoreRow{ display:flex; gap:12px; align-items:center; margin-bottom:6px; }
-#scorebox,#highbox{ background:var(--ui); padding:8px 10px; border-radius:10px; font-weight:800; box-shadow:0 8px 20px rgba(0,0,0,0.6); }
+.subtitle {
+  margin-top: -4px;
+  color: #bbb;
+  font-size: 0.9rem;
+}
 
-#bars{ display:flex; gap:12px; align-items:center; margin-bottom:6px; }
-#scoreBarWrap{ min-width:220px; }
-#scoreLabel{ font-size:11px; color:rgba(255,255,255,0.7); margin-bottom:4px; }
-#scoreBar{ width:100%; height:12px; background:rgba(255,255,255,0.04); border-radius:10px; overflow:hidden; border:1px solid rgba(255,255,255,0.03); }
-#scoreBarFill{ height:100%; width:0%; background:linear-gradient(90deg,var(--neon-pink),var(--neon-cyan)); box-shadow: 0 6px 20px rgba(0,240,255,0.08); }
+.stats {
+  display: flex;
+  gap: 10px;
+  margin: 5px 0;
+}
 
-#hearts{ display:flex; gap:6px; align-items:center; }
-.heart{ width:26px; height:26px; display:inline-block; background:linear-gradient(180deg,#ff6ea8,#b20e66); border-radius:6px; box-shadow: 0 8px 18px rgba(0,0,0,0.5); text-align:center; line-height:26px; font-weight:900; color:white; }
+button {
+  background: linear-gradient(90deg, #ff00c8, #00ffff);
+  border: none;
+  padding: 8px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  color: black;
+}
 
-#messages{ margin-top:6px; min-width:260px; min-height:28px; color:#fff; font-weight:700; }
-.tagline{ margin-top:6px; padding:8px 12px; border-radius:10px; font-weight:900; display:inline-block; text-transform:uppercase; letter-spacing:1px; }
+button:hover {
+  opacity: 0.8;
+}
 
-#controls{ margin-top:8px; display:flex; gap:6px; align-items:center; }
-.touchBtn{ width:44px; height:44px; border-radius:8px; font-size:18px; background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); box-shadow:0 8px 18px rgba(0,0,0,0.6); color:#fff; border:none; }
+.hearts {
+  margin: 5px 0;
+}
 
-#footer{ margin-top:8px; display:flex; gap:8px; align-items:center; }
-button{ cursor:pointer; border:none; padding:8px 10px; border-radius:8px; font-weight:800; color:#fff; background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); box-shadow:0 8px 20px rgba(0,0,0,0.6); }
-#startBtn{ background:linear-gradient(180deg,#00d1ff,#0078a3); }
-#restartBtn{ background:linear-gradient(180deg,#ff3fbf,#a20f5b); }
-.musicLabel{ display:flex; align-items:center; gap:6px; color:rgba(255,255,255,0.8); }
+.heart {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background: #ff4081;
+  clip-path: polygon(50% 0%, 100% 35%, 75% 100%, 50% 85%, 25% 100%, 0% 35%);
+  margin-right: 5px;
+  filter: drop-shadow(0 0 10px #ff80bf);
+}
 
-@media (max-width:700px){
-  #ui{ left:8px; top:8px; max-width:320px;}
-  #game{ height:calc(100vh - 160px); }
+#tagline {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #00ffff;
+  text-shadow: 0 0 15px #00ffff, 0 0 30px #00ffff;
+}
+
+canvas {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
