@@ -8,35 +8,17 @@
 </head>
 <body>
   <div id="ui">
-    <h1>LONE RACER</h1>
-    <p class="subtitle">Survive the Neon Road</p>
-    <div class="stats">
-      <div class="score">Score: <span id="score">0</span></div>
-      <div class="highscore">High: <span id="highscore">0</span></div>
+    <h1 id="title">🏁 Lone Racer 🏁</h1>
+    <div id="scoreboard">
+      <span id="score">Score: 0</span> |
+      <span id="highscore">High Score: 0</span>
     </div>
-    <div class="progress-container">
-      <div id="progressBar"></div>
-    </div>
-    <div class="hearts" id="hearts"></div>
-
-    <div class="controls">
-      <button id="startBtn">Start</button>
-      <button id="restartBtn">Restart</button>
-      <label><input type="checkbox" id="musicToggle" checked> Music</label>
-    </div>
-
-    <div id="tagline"></div>
+    <div id="health"></div>
+    <p id="tagline"></p>
+    <button id="startBtn">Start Game</button>
   </div>
 
   <canvas id="gameCanvas"></canvas>
-
-  <!-- preload sounds -->
-  <audio id="engineSound" src="engine.mp3" preload="auto"></audio>
-  <audio id="powerUpSound" src="powerup.mp3" preload="auto"></audio>
-  <audio id="shootSound" src="shoot.mp3" preload="auto"></audio>
-  <audio id="explosionSound" src="explosion.mp3" preload="auto"></audio>
-  <audio id="bgMusic" src="music.mp3" preload="auto" loop></audio>
-
   <script src="script.js"></script>
 </body>
 </html>
