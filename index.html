@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>LONE RACER</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="ui">
+    <div id="title">LONE RACER</div>
+    <div id="subtitle">Survive the Neon Road</div>
+
+    <div id="scoreRow">
+      <div id="scorebox">Score: <span id="score">0</span></div>
+      <div id="highbox">High: <span id="highscore">0</span></div>
+    </div>
+
+    <div id="bars">
+      <div id="scoreBarWrap">
+        <div id="scoreLabel">Progress</div>
+        <div id="scoreBar"><div id="scoreBarFill"></div></div>
+      </div>
+      <div id="livesWrap">
+        <div id="hearts"></div>
+      </div>
+    </div>
+
+    <div id="messages"></div>
+
+    <div id="controls">
+      <button id="leftBtn" class="touchBtn">◀</button>
+      <button id="rightBtn" class="touchBtn">▶</button>
+      <button id="shootBtn" class="touchBtn">●</button>
+    </div>
+
+    <div id="footer">
+      <button id="startBtn">Start</button>
+      <button id="restartBtn">Restart</button>
+      <label class="musicLabel"><input id="musicToggle" type="checkbox" checked>Music</label>
+    </div>
+  </div>
+
+  <canvas id="game"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>
