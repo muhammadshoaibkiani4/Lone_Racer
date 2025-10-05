@@ -1,47 +1,41 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>LONE RACER</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lone Racer</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div id="ui">
-    <div id="title">LONE RACER</div>
-    <div id="subtitle">Survive the Neon Road</div>
-
-    <div id="scoreRow">
-      <div id="scorebox">Score: <span id="score">0</span></div>
-      <div id="highbox">High: <span id="highscore">0</span></div>
+    <h1>LONE RACER</h1>
+    <p class="subtitle">Survive the Neon Road</p>
+    <div class="stats">
+      <div class="score">Score: <span id="score">0</span></div>
+      <div class="highscore">High: <span id="highscore">0</span></div>
     </div>
-
-    <div id="bars">
-      <div id="scoreBarWrap">
-        <div id="scoreLabel">Progress</div>
-        <div id="scoreBar"><div id="scoreBarFill"></div></div>
-      </div>
-      <div id="livesWrap">
-        <div id="hearts"></div>
-      </div>
+    <div class="progress-container">
+      <div id="progressBar"></div>
     </div>
+    <div class="hearts" id="hearts"></div>
 
-    <div id="messages"></div>
-
-    <div id="controls">
-      <button id="leftBtn" class="touchBtn">◀</button>
-      <button id="rightBtn" class="touchBtn">▶</button>
-      <button id="shootBtn" class="touchBtn">●</button>
-    </div>
-
-    <div id="footer">
+    <div class="controls">
       <button id="startBtn">Start</button>
       <button id="restartBtn">Restart</button>
-      <label class="musicLabel"><input id="musicToggle" type="checkbox" checked>Music</label>
+      <label><input type="checkbox" id="musicToggle" checked> Music</label>
     </div>
+
+    <div id="tagline"></div>
   </div>
 
-  <canvas id="game"></canvas>
+  <canvas id="gameCanvas"></canvas>
+
+  <!-- preload sounds -->
+  <audio id="engineSound" src="engine.mp3" preload="auto"></audio>
+  <audio id="powerUpSound" src="powerup.mp3" preload="auto"></audio>
+  <audio id="shootSound" src="shoot.mp3" preload="auto"></audio>
+  <audio id="explosionSound" src="explosion.mp3" preload="auto"></audio>
+  <audio id="bgMusic" src="music.mp3" preload="auto" loop></audio>
 
   <script src="script.js"></script>
 </body>
